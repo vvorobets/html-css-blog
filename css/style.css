@@ -1,0 +1,339 @@
+	    	body {
+			    background-color: #eeeeff;
+			}
+
+			header .logo {
+				grid-area: logo;
+				align-self: center;
+			}
+
+			.logo img {
+				height: 120px;
+			}
+
+			header .socials-wrp {
+				grid-area: socials;
+				justify-self: end;
+			}
+
+			.socials-wrp a {
+				font-size: 32px;
+				color: #111111;
+				margin: 5px;
+			}
+
+			.socials-wrp a:hover {
+				color: #999999;
+			}
+
+			header .search {
+				grid-area: search;
+				justify-self: end;
+			}
+
+			nav {
+				grid-area: nav;
+				justify-self: end;
+			}
+			nav ul {
+				display: flex;
+				flex-direction: row;
+				list-style-type: none;
+			}
+			.nav-item {
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: #111111;
+				margin: 5px;
+				transition: color 0.3s ease;
+			}
+			.nav-item:hover {
+				color: #999999;
+			}
+			.menu-toggle input {
+				visibility: hidden;
+			}
+
+			header {
+			  	grid-area: header;
+			  	display: grid;
+			  	grid-template-columns: 1fr 1fr 230px;
+			    grid-template-rows: auto;
+			    grid-template-areas: 
+				    "logo socials search"
+				    "logo . ."
+				    "logo . nav";
+				    grid-gap: 10px;
+				background: url("https://static1.squarespace.com/static/584effcb03596e5ae951e1ae/t/58a201b03a04113e81b8da62/1515367930711/JasperPhoto_Caley_9846_home.jpg") center no-repeat;
+			}
+
+			.post {
+				border:0; 
+				border-radius:3px; 
+				box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+				margin: 1px; 
+				max-width:658px; 
+				padding:8px;
+				overflow: hidden;
+			}
+
+			.post img {
+				width:100%;
+				transition: transform .1s;
+			}
+
+			.post:hover img {
+    			transform: scale(1.15);
+			}
+
+			.post p {
+				margin:8px 0 0 0; padding:0 4px;
+			}
+
+			.post:hover {
+				background-color: #f5f5f5;
+			}
+
+			.post p:last-child {
+				color:#aaaaaa; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;
+			}
+
+			.post p a {
+				color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;
+			}
+
+			time {
+				font-family:Arial,sans-serif; 
+				font-size:14px; 
+				line-height:17px;
+			}
+
+			main {
+			  	grid-area: main;
+			  	display: grid;
+			  	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+			  	grid-gap: 10px;
+			}
+			aside {
+			  	grid-area: sidebar;
+			  	display: flex;
+			  	flex-direction: column;
+			  	align-items: center;
+			}
+
+			aside img {
+				width: 75%;
+				border-radius: 50%;
+				max-width: 240px;
+			}
+
+			p {
+				text-align: justify;
+			}
+
+			aside .submit-btn {
+				width: 100%;
+				
+			}
+
+			aside .tags-wrp {
+				
+				
+				text-align: center;
+			}
+
+			aside .tags-wrp a {
+				text-decoration: none;
+				margin: 2px;
+			}
+			.comments-wrp {
+				width: 100%;
+			}
+			.comment-item {
+				width: 100%;
+				height: 40px;
+				text-decoration: none;
+				margin: 2px;
+				overflow: hidden;
+				font-size: 12px;
+				text-overflow:ellipsis; 
+				white-space:nowrap;
+			}
+			.comment-item img {
+				float: left;
+				height: 40px;
+				width: 40px;
+			}
+			.comment-item a {
+				text-decoration: none;
+			}
+			footer {
+			  	grid-area: footer;
+			  	display: flex;
+			  	flex-direction: row;
+			  	background-color: #f9f9f9;
+			  	align-content: space-between;
+			}
+
+			footer .logo {
+				width: 25%;
+			}
+			footer .more-info {
+				width: 50%;
+				padding: 5px;
+			}
+
+			footer a {
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			.container {
+				max-width:1200px;
+				display: grid;
+			    grid-template-columns: 1fr 1fr 30px 25%;
+			    grid-template-rows: auto;
+			    grid-template-areas: 
+				    "header header header header"
+				    "main main . sidebar"
+				    "footer footer footer footer";
+			}
+
+			@media only screen and (max-width: 780px) {
+			    header {
+					display: flex;
+					flex-flow:row-reverse wrap-reverse;
+					align-content:space-between;
+				}
+				header .logo {
+					align-self: center;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+
+				}
+				header .socials-wrp {
+					order: 1;
+				}
+				nav {
+					order: 1;
+				}
+
+
+	            .menu-toggle {
+  					display: block;
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					z-index: 1;
+					-webkit-user-select: none;
+					user-select: none;
+				}
+				.menu-toggle input {
+				visibility: visible;
+				  display: block;
+				  width: 40px;
+				  height: 32px;
+				  position: absolute;
+				  top: -7px;
+				  left: -5px;
+				  cursor: pointer;
+				  opacity: 0; 
+				  z-index: 2; 
+				  -webkit-touch-callout: none;
+				}
+				.menu-toggle span {
+				  display: block;
+				  width: 33px;
+				  height: 4px;
+				  margin-bottom: 5px;
+				  position: relative;
+				  background: #cdcdcd;
+				  border-radius: 3px;
+				  z-index: 1;
+				  transform-origin: 4px 0px;
+				  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				              opacity 0.55s ease;
+				}
+
+				.menu-toggle span:first-child
+				{
+				  transform-origin: 0% 0%;
+				}
+
+				.menu-toggle span:nth-last-child(2)
+				{
+				  transform-origin: 0% 100%;
+				}
+
+				.menu-toggle input:checked ~ span
+				{
+				  opacity: 1;
+				  transform: rotate(45deg) translate(-2px, -1px);
+				  background: #232323;
+				}
+
+				.menu-toggle input:checked ~ span:nth-last-child(3)
+				{
+				  opacity: 0;
+				  transform: rotate(0deg) scale(0.2, 0.2);
+				}
+
+				.menu-toggle input:checked ~ span:nth-last-child(2)
+				{
+				  transform: rotate(-45deg) translate(0, -1px);
+				}
+
+				.menu-toggle ul {
+					flex-direction: column;
+				  position: fixed;
+				  width: 100%;
+				  margin: -100px 0 0 -50px;
+				  padding: 50px;
+				  padding-top: 125px;
+				  
+				  background: #ededed;
+				  list-style-type: none;
+				  -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
+				  transform-origin: 0% 0%;
+				  transform: translate(-100%, 0);
+				  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+				}
+				.menu-toggle ul li
+				{
+				  padding: 10px 0;
+				  font-size: 22px;
+				}
+				.menu-toggle input:checked ~ ul
+				{
+				  transform: none;
+				}
+    		}
+
+    		@media only screen and (max-width: 600px) {
+				header .socials-wrp {
+					display: none;
+					background: url("https://static1.squarespace.com/static/584effcb03596e5ae951e1ae/t/58a201b03a04113e81b8da62/1515367930711/JasperPhoto_Caley_9846_home.jpg") bottom no-repeat;
+				}
+
+				footer {
+			  		flex-direction: column;
+			  		align-items: center;
+
+				}
+				footer .more-info {
+					width: 90%;
+				}
+
+				aside .submit-btn {
+				width: 90vw;
+				
+			}
+				.container {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+
